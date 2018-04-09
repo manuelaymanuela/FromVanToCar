@@ -20,7 +20,7 @@
         <td><%= vehicle.kind_of_vehicle %></td>
         <td><%= vehicle.description %></td>
         <td><%= vehicle.price_hour %></td>
-        <td><%= vehicle.photo %></td>
+        <td><%= image_tag vehicle.photo.url, size:300 if vehicle.photo.url %></td>
         <td><%= vehicle.user.name %></td>
         <td><%= link_to 'Show', vehicle %></td>
         <%if current_user == vehicle.user%>
