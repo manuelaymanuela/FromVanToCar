@@ -25,10 +25,10 @@
     <%= form.label :price_hour %>
     <%= form.text_field :price_hour, id: :vehicle_price_hour %>
   </div>
-
-  <div class="field">
-    <%= form.label :photo %>
-    <%= form.text_field :photo, id: :vehicle_photo %>
+  </br>
+   <div class="form-group">
+    <strong>Upload a profile picture:</strong></br>
+    <%= form.file_field :photo, id: :vehicle_photo %>
   </div>
 
   <!--<div class="field">
