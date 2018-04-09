@@ -21,10 +21,13 @@
         <td><%= vehicle.description %></td>
         <td><%= vehicle.price_hour %></td>
         <td><%= vehicle.photo %></td>
-        <td><%= vehicle.user %></td>
+        <td><%= vehicle.user.name %></td>
         <td><%= link_to 'Show', vehicle %></td>
-        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%if current_user == vehicle.user%>
+          <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+          <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
