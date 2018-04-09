@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kind_of_vehicle: MyString
+  description: MyText
+  price_hour: 9.99
+  photo: MyString
+  user: one
+
+two:
+  kind_of_vehicle: MyString
+  description: MyText
+  price_hour: 9.99
+  photo: MyString
+  user: two
