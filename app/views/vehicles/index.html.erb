@@ -1,22 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Vehicles</h1>
+<div class="row">
   <% @vehicles.each do |vehicle| %>
-    <div class="card" style="width: 18rem;">
-      <%= link_to(vehicle) do %>
 
-      <%vehicle_pic = vehicle.photo.url || "furgoneta.png"%>
-      <%= image_tag vehicle_pic, size:300, class:"card-img-top", alt:"Card image cap"%>
+      <div class="card col-md-4" style="width: 18rem;">
 
-      
-      <%end%>
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <%= link_to(vehicle) do %>
+          <%vehicle_pic = vehicle.photo.url || "furgoneta.png"%>
+          <%= image_tag vehicle_pic, size:300, class:"card-img-top", alt:"Card image cap"%>
+        <%end%>
+
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
       </div>
-    </div>
   <%end%>
+</div>
 
 <table>
   <thead>
