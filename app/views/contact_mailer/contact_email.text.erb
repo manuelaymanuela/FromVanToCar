@@ -1,9 +1,10 @@
-Welcome to FromVanToCar, <%=@user.name%>
+Welcome to FromVanToCar, <%=@vehicle.user.name%>
 
-You've a petition of <%=@customer%>. 
-Is interested in your <%=@vehicle%> to <%=@date%>.
+You've a petition of <%=@customer.name%>. 
+Is interested in your <%=@vehicle.kind_of_vehicle%> to <%=@date%>.
 The details of this ofert are:
-<%=@message @detail%>.
+<%=@message%>
+ <%=@detail%>.
 
 You can answer this email to: <%= @customer.email %>.
 Have a nice day!
