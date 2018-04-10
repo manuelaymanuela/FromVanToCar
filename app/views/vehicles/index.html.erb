@@ -3,10 +3,11 @@
 <h1>Vehicles</h1>
 <div class="row">
   <% @vehicles.each do |vehicle| %>
-      <div class="card col-md-4 mb-4 mr-4 mx-auto" style="width: 18rem;">
+  <div class="col-md-4 mx-auto">
+      <div class="card mb-4 mr-4" style="width: auto; heigth: auto;">
         <%= link_to(vehicle) do %>
           <%vehicle_pic = vehicle.photo.url || "motocar.png"%>
-          <%= image_tag vehicle_pic, size:300, class:"card-img-top", alt:"Card image cap"%>
+          <%= image_tag vehicle_pic, class:"card-img-top", alt:"Card image cap"%>
         <%end%>
         <div class="card-body">
           <h5 class="card-title"><%=vehicle.kind_of_vehicle%></h5>
@@ -31,9 +32,10 @@
         <%=image_tag user_pic, size:40 %><%=  vehicle.user.name%>
         </div>
       </div>
+            </div>
+
   <%end%>
 </div>
-
 
 
 

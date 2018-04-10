@@ -64,3 +64,8 @@ gem 'jquery-rails'
 
 # Carrierwave
 gem 'carrierwave'
+
+# DatetimePicker
+
+gem 'momentjs-rails'
+gem 'bootstrap4-datetime-picker-rails'
