@@ -2,7 +2,9 @@
 
 <p>
   <strong>Kind of vehicle:</strong>
-  <%= @vehicle.kind_of_vehicle %>
+  <%= @vehicle.kind_of_vehicle %></br>
+  <%vehicle_pic = @vehicle.photo.url || "motocar.png"%>
+  <%= image_tag vehicle_pic, size:400, class:"rounded-circle", alt:"Card image cap"%>
 </p>
 
 <p>
@@ -16,13 +18,10 @@
 </p>
 
 <p>
-  <strong>Photo:</strong>
-  <%= @vehicle.photo %>
-</p>
-
-<p>
   <strong>User:</strong>
-  <%= @vehicle.user %>
+  <%= @vehicle.user.name %></br>
+  <%user_pic = @vehicle.user.photo.url || "srxcuadrado.png"%>
+  <%=image_tag user_pic, size:60 %>
 </p>
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
