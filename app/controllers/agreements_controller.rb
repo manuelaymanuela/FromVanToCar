@@ -10,8 +10,8 @@ class AgreementsController < ApplicationController
         @vehicle_id = params[:vehicle_id]
         @vehicle = Vehicle.find(@vehicle_id)
         @customer = current_user
-        #@vehicle.user.email
-        #ContactMailer.contact_email(@message, @detail, @date, @vehicle, @customer)
+        @vehicle.user.email
+        ContactMailer.contact_email(@message, @detail, @date, @vehicle, @customer)
         redirect_to root_path
 
     end

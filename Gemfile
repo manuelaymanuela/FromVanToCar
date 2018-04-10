@@ -69,3 +69,6 @@ gem 'carrierwave'
 
 gem 'momentjs-rails'
 gem 'bootstrap4-datetime-picker-rails'
+
+# Figaro
+gem 'figaro'

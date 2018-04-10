@@ -1,0 +1,10 @@
+<h1>Welcome to FromVanToCar, <%= @user.name %></h1>
+<p>
+  You've a petition of <%=@customer.name%>. 
+  <p>Is interested in your <%=@vehicle%> for the <%=@date%>.</p>
+  <p>The details of this offer are:
+  <%=@message @detail%>.
+ </p>
+<p>
+  You can answer this email to: <%= @customer.email %>.
+</p>Have a nice day!</p>
